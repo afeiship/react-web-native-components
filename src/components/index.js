@@ -23,16 +23,12 @@ export default class extends Component {
   };
   /*===properties end===*/
 
-  _onChange = (inEvent) => {
-    const { value } = inEvent.target;
-  };
 
   render() {
-    const { className, onChange, ...props } = this.props;
+    const { className, ...props } = this.props;
     return (
       <input
         data-component={CLASS_NAME}
-        onChange={this._onChange}
         className={classNames(CLASS_NAME, className)}
         {...props}
       />

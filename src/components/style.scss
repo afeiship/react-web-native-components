@@ -1,4 +1,10 @@
 $react-input-options: () !default;
 
 .react-input {
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  &:focus {
+    outline: none;
+    border-color: darken(#ccc, 10%);
+  }
 }
