@@ -4,13 +4,14 @@ import React from 'react';
 import './assets/style.scss';
 
 class App extends React.Component {
-  _onChange = (inEvent) => {
+  onChange = (inEvent) => {
     console.log('inEvent', inEvent.target.value);
   };
+
   render() {
     return (
       <div className="app-container">
-        <ReactInput defaultValue="1213" onChange={this._onChange} />
+        <ReactInput defaultValue="1213" onChange={this.onChange} />
       </div>
     );
   }
