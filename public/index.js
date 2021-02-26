@@ -1,6 +1,7 @@
-import ReactInput from '../src/main';
-import ReactDOM from 'react-dom';
+import ReactDemokit from '@jswork/react-demokit';
 import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactInput from '../src/main';
 import './assets/style.scss';
 
 class App extends React.Component {
@@ -9,7 +10,7 @@ class App extends React.Component {
   };
 
   onChange = (inEvent) => {
-    // console.log('inEvent', inEvent.target.value);
+    console.log('inEvent', inEvent.target.value);
     this.setState({ value: inEvent.target.value });
   };
 
@@ -19,13 +20,16 @@ class App extends React.Component {
 
   render() {
     const { value } = this.state;
+
     return (
-      <div className="app-container">
-        <button className="button" onClick={this.setRandomValue}>
+      <ReactDemokit
+        className="p-3 app-container"
+        url="https://github.com/afeiship/react-input">
+        <button className="button mb-2 is-primary is-fullwidth" onClick={this.setRandomValue}>
           SetRandomValue
         </button>
         <ReactInput value={value} onChange={this.onChange} />
-      </div>
+      </ReactDemokit>
     );
   }
 }
