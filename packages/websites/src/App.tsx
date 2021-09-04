@@ -3,23 +3,21 @@ import Input from "@jswork/react-input";
 import Checkbox from "@jswork/react-checkbox";
 
 function App() {
+  const ref1 = React.useRef(null);
+  const ref2 = React.useRef(null);
   return (
     <div className="App">
       <aside>Input</aside>
       <section>
-        <Input
-          placeholder="Type text1..."
-          onChange={(inEvent) => console.log(inEvent.target.value)}
-        />
-        <Input
-          placeholder="Type text2..."
-          type="search"
-          onChange={(inEvent) => console.log(inEvent.target.value)}
-        />
         <p>
           <label>
             <Checkbox
-              onChange={(inEvent) => console.log(inEvent.target.value)}
+              ref={ref1}
+              forwardedRef={ref2}
+              indeterminate
+              onChange={(inEvent) =>
+                console.log(inEvent.target.value, ref1, ref2)
+              }
             />
             <strong>同意</strong>
           </label>

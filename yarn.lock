@@ -1593,6 +1593,11 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
+"@jswork/class-imperative-handle@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@jswork/class-imperative-handle/-/class-imperative-handle-1.0.0.tgz#bf4e0e86fc44acca522e98686d696dd99d9f36ca"
+  integrity sha512-hnYvjbHLoQJfBpGDvo9FmUCmLjT4AG58UUJ5cESXO+Wh0Unim3rQOAslsyegBJfdSvaoH3r0UEFUieUPWXgVFA==
+
 "@jswork/filter-react-props@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@jswork/filter-react-props/-/filter-react-props-1.0.2.tgz#a9041c983bb4c08985601e6ac7839003f15ddbde"

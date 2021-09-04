@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import noop from '@jswork/noop';
-
+import classImperativeHandle from '@jswork/class-imperative-handle';
 const CLASS_NAME = 'react-checkbox';
 
 export interface EventTarget {
@@ -10,8 +10,9 @@ export interface EventTarget {
   };
 }
 
-export interface ReactCheckboxProps
-  extends Omit<React.AllHTMLAttributes<HTMLInputElement>, 'onChange'> {
+type BaseProps = Omit<React.AllHTMLAttributes<HTMLInputElement>, 'onChange'>;
+
+export interface ReactCheckboxProps extends BaseProps {
   /**
    * The changed handler.
    */
@@ -44,29 +45,41 @@ class ReactCheckbox extends Component<ReactCheckboxProps> {
     this.root.indeterminate = indeterminate;
   }
 
-  onChange = (inEvent) => {
+  shouldComponentUpdate(inNextProps) {
+    if (inNextProps.indeterminate !== this.props.indeterminate) {
+      this.root.indeterminate = inNextProps.indeterminate;
+    }
+    return true;
+  }
+
+  handleChange = (inEvent) => {
     const { onChange } = this.props;
     const checked = inEvent.target.checked;
     const target = { value: checked };
     onChange!({ target });
   };
 
+  handleRef = (inRoot) => {
+    const { forwardedRef } = this.props;
+    classImperativeHandle(forwardedRef, inRoot);
+    this.root = inRoot;
+  };
+
   render() {
-    const { className, defaultValue, onChange, indeterminate, ...props } = this.props;
+    const { className, defaultValue, onChange, indeterminate, forwardedRef, ...props } = this.props;
     return (
       <input
         type="checkbox"
         data-component={CLASS_NAME}
         defaultChecked={defaultValue}
         className={classNames(CLASS_NAME, className)}
-        onChange={this.onChange}
-        ref={(root) => (this.root = root)}
+        onChange={this.handleChange}
+        ref={this.handleRef}
         {...props}
       />
     );
   }
 }
-
 
 export default React.forwardRef((props: ReactCheckboxProps, ref: any) => (
   <ReactCheckbox {...props} ref={ref} />
