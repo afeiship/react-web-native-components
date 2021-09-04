@@ -1,0 +1,73 @@
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import noop from '@jswork/noop';
+
+const CLASS_NAME = 'react-checkbox';
+
+export interface EventTarget {
+  target: {
+    value: any;
+  };
+}
+
+export interface ReactCheckboxProps
+  extends Omit<React.AllHTMLAttributes<HTMLInputElement>, 'onChange'> {
+  /**
+   * The changed handler.
+   */
+  onChange?: (inEvent: EventTarget) => void;
+  /**
+   * The indeterminate for checkbox.
+   */
+  indeterminate?: boolean;
+  /**
+   * Default checked.
+   */
+  defaultChecked?: any;
+  /**
+   * Reference to original ref instance(tag: dom).
+   */
+  forwardedRef?: any;
+}
+
+class ReactCheckbox extends Component<ReactCheckboxProps> {
+  static displayName = CLASS_NAME;
+  static version = '__VERSION__';
+  static defaultProps = {
+    onChange: noop
+  };
+
+  private root;
+
+  componentDidMount() {
+    const { indeterminate } = this.props;
+    this.root.indeterminate = indeterminate;
+  }
+
+  onChange = (inEvent) => {
+    const { onChange } = this.props;
+    const checked = inEvent.target.checked;
+    const target = { value: checked };
+    onChange!({ target });
+  };
+
+  render() {
+    const { className, defaultValue, onChange, indeterminate, ...props } = this.props;
+    return (
+      <input
+        type="checkbox"
+        data-component={CLASS_NAME}
+        defaultChecked={defaultValue}
+        className={classNames(CLASS_NAME, className)}
+        onChange={this.onChange}
+        ref={(root) => (this.root = root)}
+        {...props}
+      />
+    );
+  }
+}
+
+
+export default React.forwardRef((props: ReactCheckboxProps, ref: any) => (
+  <ReactCheckbox {...props} ref={ref} />
+));

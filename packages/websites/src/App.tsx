@@ -1,5 +1,6 @@
 import React from "react";
 import Input from "@jswork/react-input";
+import Checkbox from "@jswork/react-checkbox";
 
 function App() {
   return (
@@ -10,12 +11,19 @@ function App() {
           placeholder="Type text1..."
           onChange={(inEvent) => console.log(inEvent.target.value)}
         />
-
         <Input
           placeholder="Type text2..."
           type="search"
           onChange={(inEvent) => console.log(inEvent.target.value)}
         />
+        <p>
+          <label>
+            <Checkbox
+              onChange={(inEvent) => console.log(inEvent.target.value)}
+            />
+            <strong>同意</strong>
+          </label>
+        </p>
       </section>
     </div>
   );
