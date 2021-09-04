@@ -1,22 +1,22 @@
-import React from 'react';
-import Input from '@jswork/react-input';
+import React from "react";
+import Input from "@jswork/react-input";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <aside>Input</aside>
+      <section>
+        <Input
+          placeholder="Type text1..."
+          onChange={(inEvent) => console.log(inEvent.target.value)}
+        />
+
+        <Input
+          placeholder="Type text2..."
+          type="search"
+          onChange={(inEvent) => console.log(inEvent.target.value)}
+        />
+      </section>
     </div>
   );
 }

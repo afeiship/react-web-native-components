@@ -1,10 +1,20 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import noop from '@jswork/noop';
 
 const CLASS_NAME = 'react-input';
 
-export interface ReactInputProps extends React.HTMLAttributes<HTMLInputElement> {
+export interface EventTarget {
+  target: {
+    value: any;
+  };
+}
+
+export interface ReactInputProps
+  extends Omit<React.AllHTMLAttributes<HTMLInputElement>, 'onChange'> {
+  /**
+   * The changed handler.
+   */
+  onChange?: (inEvent: EventTarget) => void;
   /**
    * Reference to original ref instance(tag: dom).
    */
@@ -14,10 +24,6 @@ export interface ReactInputProps extends React.HTMLAttributes<HTMLInputElement> 
 class ReactInput extends Component<ReactInputProps> {
   static displayName = CLASS_NAME;
   static version = '__VERSION__';
-
-  static defaultProps = {
-    onChange: noop
-  };
 
   render(): React.ReactNode {
     const { className, forwardedRef, ...props } = this.props;
