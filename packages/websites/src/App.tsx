@@ -1,26 +1,30 @@
 import React from "react";
-import Input from "@jswork/react-input";
-import Checkbox from "@jswork/react-checkbox";
+import Select from "@jswork/react-select";
 
 function App() {
   const ref1 = React.useRef(null);
   const ref2 = React.useRef(null);
+  const items = [
+    {
+      label: "optino1",
+      value: "v1",
+    },
+    {
+      label: "optino2",
+      value: "v2",
+    },
+    {
+      label: "optino3",
+      value: "v3",
+    },
+  ];
+
   return (
     <div className="App">
       <aside>Input</aside>
       <section>
         <p>
-          <label>
-            <Checkbox
-              ref={ref1}
-              forwardedRef={ref2}
-              indeterminate
-              onChange={(inEvent) =>
-                console.log(inEvent.target.value, ref1, ref2)
-              }
-            />
-            <strong>同意</strong>
-          </label>
+          <Select placeholder="请选择" items={[]} />
         </p>
       </section>
     </div>

@@ -1598,6 +1598,11 @@
   resolved "https://registry.yarnpkg.com/@jswork/class-imperative-handle/-/class-imperative-handle-1.0.0.tgz#bf4e0e86fc44acca522e98686d696dd99d9f36ca"
   integrity sha512-hnYvjbHLoQJfBpGDvo9FmUCmLjT4AG58UUJ5cESXO+Wh0Unim3rQOAslsyegBJfdSvaoH3r0UEFUieUPWXgVFA==
 
+"@jswork/class-imperative-handle@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@jswork/class-imperative-handle/-/class-imperative-handle-1.0.1.tgz#858314d14782260e9697747b8aadebe7515eab4c"
+  integrity sha512-Wqc5I+EWgC2OPeStj91vVzQlBVRgrnMzZsrC4+OemTnLcnV56Og7oeupubRupTGtJNIPDO47+InbpuLMvAlcoA==
+
 "@jswork/filter-react-props@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@jswork/filter-react-props/-/filter-react-props-1.0.2.tgz#a9041c983bb4c08985601e6ac7839003f15ddbde"
@@ -1638,6 +1643,14 @@
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@jswork/noop/-/noop-1.0.0.tgz#e9f080ab835b63fa17141239a2ecbf4731e5fd79"
   integrity sha512-jlMgESiuHp7W4pFCbhQssFVdzNjRDDnVfmhOIYmHRbKxWwTOEFpgC2e/BbXc/u96N3qTEEy9o3Wie4hUu0fAYw==
+
+"@jswork/react-list@^1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@jswork/react-list/-/react-list-1.1.3.tgz#1f9c7665108bebf6e106cc1e2cd76aa96e9e15bb"
+  integrity sha512-+vfX/sFZ9ab5uEFgFpneCDLGycqZDaVXIKBtZeLlR6AvfNo5jo/kR16hB0LpE5pJ4tC4nVxp3Ov8yEIEbICqpg==
+  dependencies:
+    "@jswork/noop" "^1.0.0"
+    classnames "^2.2.6"
 
 "@jswork/react-markdown-props@^1.0.1":
   version "1.0.1"
