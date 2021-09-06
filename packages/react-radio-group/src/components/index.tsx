@@ -39,7 +39,7 @@ export interface ReactRadioGroupProps extends BaseProps {
   /**
    * Default selected value.
    */
-  defaultValue?: any | any[];
+  defaultValue?: any;
   /**
    * Reference to original ref instance(tag: dom).
    */

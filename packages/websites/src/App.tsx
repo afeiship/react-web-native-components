@@ -1,5 +1,5 @@
 import React from "react";
-import RadioGroup from "@jswork/react-radio-group";
+import CheckboxGroup from "@jswork/react-checkbox-group";
 
 function App() {
   const ref1 = React.useRef(null);
@@ -24,7 +24,7 @@ function App() {
       <aside>Input</aside>
       <section>
         <p>
-          <RadioGroup
+          <CheckboxGroup
             ref={ref1}
             forwardedRef={ref2}
             placeholder="请选择"
