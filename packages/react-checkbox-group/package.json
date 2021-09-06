@@ -73,13 +73,11 @@
   },
   "dependencies": {
     "@jswork/class-imperative-handle": "^1.0.1",
-    "@jswork/filter-react-props": "^1.0.2",
     "@jswork/next": "^1.0.9",
     "@jswork/next-toggle": "^1.0.0",
     "@jswork/noop": "^1.0.0",
     "@jswork/react-list": "^1.1.3",
-    "classnames": "^2.2.6",
-    "debounce": "^1.2.1"
+    "classnames": "^2.2.6"
   },
   "publishConfig": {
     "access": "public",

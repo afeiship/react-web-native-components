@@ -3,11 +3,11 @@ import classNames from 'classnames';
 import noop from '@jswork/noop';
 import ReactList from '@jswork/react-list';
 import classImperativeHandle from '@jswork/class-imperative-handle';
-import debounce from 'debounce';
 import nxToggle from '@jswork/next-toggle';
 
 const randomName = () => 'cg_' + Math.random().toString(36).substring(6);
 const CLASS_NAME = 'react-checkbox-group';
+const CHECKBOX_SELECTOR = 'input[type="checkbox"]';
 const noEventStyle: any = { pointerEvents: 'none' };
 const DEFAULT_TEMPLATE = ({ item }, cb) => {
   const { value, label } = item;
@@ -74,24 +74,31 @@ class ReactCheckboxGroup extends Component<ReactCheckboxGroupProps> {
 
   private root;
 
-  get value() {
-    const result: any[] = [];
-    const fields = this.root.querySelectorAll(`.${CLASS_NAME} [type="checkbox"]:checked`);
-    fields.forEach((item) => {
-      result.push(item.dataset.value);
-    });
-    return result;
-  }
-
-  handleChange = () => {
-    const { onChange } = this.props;
-    onChange!({ target: { value: this.value } });
-  };
-
   handleRef = (inRoot) => {
     const { forwardedRef } = this.props;
     classImperativeHandle(forwardedRef, inRoot);
     this.root = inRoot;
+  };
+
+  componentDidMount() {
+    this.updateElement(this.props);
+  }
+
+  shouldComponentUpdate(nextProps) {
+    const { value } = nextProps;
+    if (value !== this.props.value) {
+      this.updateElement(nextProps);
+    }
+    return true;
+  }
+
+  updateElement = (inProps) => {
+    const { value } = inProps;
+    const els = this.root.querySelectorAll(CHECKBOX_SELECTOR);
+    els.forEach((el) => {
+      const dataValue = el.dataset.value;
+      el.checked = value?.includes(dataValue);
+    });
   };
 
   handleTemplate = ({ item, index }) => {
@@ -113,18 +120,16 @@ class ReactCheckboxGroup extends Component<ReactCheckboxGroupProps> {
     return template!({ item, index }, cb);
   };
 
-  originalClick = (inEvent) => {
+  handleClick = (inEvent) => {
     const { value, onChange } = this.props;
     const { target } = inEvent;
-    const el = target.querySelector('[type="checkbox"]');
+    const el = target.querySelector(CHECKBOX_SELECTOR);
     nxToggle(value, el.dataset.value);
     el.checked = !el.checked;
     this.forceUpdate(() => {
       onChange!({ target: { value } });
     });
   };
-
-  handleClick = debounce(this.originalClick, 100, true);
 
   render() {
     const {
