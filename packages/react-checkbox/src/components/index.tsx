@@ -26,6 +26,10 @@ export interface ReactCheckboxProps extends BaseProps {
    */
   defaultValue?: any;
   /**
+   * Default checked.
+   */
+  value?: any;
+  /**
    * Reference to original ref instance(tag: dom).
    */
   forwardedRef?: any;
@@ -66,11 +70,13 @@ class ReactCheckbox extends Component<ReactCheckboxProps> {
   };
 
   render() {
-    const { className, defaultValue, onChange, indeterminate, forwardedRef, ...props } = this.props;
+    const { className, defaultValue, onChange, indeterminate, forwardedRef, value, ...props } =
+      this.props;
     return (
       <input
         type="checkbox"
         data-component={CLASS_NAME}
+        checked={value}
         defaultChecked={defaultValue}
         className={classNames(CLASS_NAME, className)}
         onChange={this.handleChange}

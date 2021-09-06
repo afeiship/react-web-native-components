@@ -21,7 +21,7 @@ const DEFAULT_TEMPLATE = ({ item }, cb) => {
 
 export interface EventTarget {
   target: {
-    value: any;
+    value: any[];
   };
 }
 
@@ -96,7 +96,7 @@ class ReactCheckboxGroup extends Component<ReactCheckboxGroupProps> {
     const { value } = inProps;
     const els = this.root.querySelectorAll(CHECKBOX_SELECTOR);
     els.forEach((el) => {
-      const dataValue = el.dataset.value;
+      const dataValue = el.value;
       el.checked = value?.includes(dataValue);
     });
   };
@@ -110,7 +110,7 @@ class ReactCheckboxGroup extends Component<ReactCheckboxGroupProps> {
           defaultChecked={defaultValue!.includes(value)}
           name={name}
           type="checkbox"
-          data-value={value}
+          value={value}
           style={noEventStyle}
           {...itemProps}
         />
@@ -124,10 +124,10 @@ class ReactCheckboxGroup extends Component<ReactCheckboxGroupProps> {
     const { value, onChange } = this.props;
     const { target } = inEvent;
     const el = target.querySelector(CHECKBOX_SELECTOR);
-    nxToggle(value, el.dataset.value);
+    nxToggle(value, el.value);
     el.checked = !el.checked;
     this.forceUpdate(() => {
-      onChange!({ target: { value } });
+      onChange!({ target: { value: value as string[] } });
     });
   };
 

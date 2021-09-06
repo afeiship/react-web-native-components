@@ -17,5 +17,8 @@ npm install @jswork/react-checkbox
 > 普通的 checkbox ，适合 toggle 的场景。
 
 ```tsx live
-<ReactCheckbox />
+<label>
+  <ReactCheckbox onChange={e=>console.log(e.target.value)} />
+  <strong>I agree</strong>
+</label>
 ```

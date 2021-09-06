@@ -1,0 +1,32 @@
+---
+id: react-checkbox-group
+title: react-checkbox-group
+sidebar_label: react-checkbox-group
+slug: /components/react-checkbox-group
+---
+
+# description
+
+> Checkbox.
+
+## installation
+
+```bash npm2yarn
+npm install @jswork/react-checkbox-group
+```
+
+## usage
+
+> 普通的 checkbox-group。
+
+```tsx live
+<ReactCheckboxGroup
+  items={[
+    { value: "v1", label: "label1" },
+    { value: "v2", label: "label2" },
+    { value: 3, label: "label3 is number" },
+    { value: true, label: "label4 is bool:true" },
+  ]}
+  onChange={(e) => console.log(e.target.value)}
+/>
+```
