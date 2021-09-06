@@ -1,0 +1,33 @@
+---
+id: react-radio-group
+title: react-radio-group
+sidebar_label: react-radio-group
+slug: /components/react-radio-group
+---
+
+# description
+
+> Checkbox.
+
+## installation
+
+```bash npm2yarn
+npm install @jswork/react-radio-group
+```
+
+## usage
+
+> 普通的 checkbox ，适合 toggle 的场景。
+
+```tsx live
+<ReactRadioGroup
+  defaultValue="v1"
+  items={[
+    { value: "v1", label: "label1" },
+    { value: "v2", label: "label2" },
+    { value: 3, label: "label3 is number" },
+    { value: true, label: "label4 is bool:true" },
+  ]}
+  onChange={(e) => console.log(e.target.value)}
+/>
+```

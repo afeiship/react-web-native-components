@@ -75,7 +75,7 @@ class ReactRadioGroup extends Component<ReactRadioGroupProps> {
 
     return {
       checked: val(value),
-      defaultValue: val(defaultValue)
+      defaultChecked: val(defaultValue)
     };
   }
 
