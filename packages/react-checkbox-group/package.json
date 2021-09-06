@@ -1,6 +1,6 @@
 {
   "name": "@jswork/react-checkbox-group",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Checkbox/checkbox group component for react.",
   "license": "MIT",
   "main": "dist/index.js",
