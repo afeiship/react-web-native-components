@@ -1,5 +1,5 @@
 import React from "react";
-import Select from "@jswork/react-select";
+import RadioGroup from "@jswork/react-radio-group";
 
 function App() {
   const ref1 = React.useRef(null);
@@ -24,7 +24,15 @@ function App() {
       <aside>Input</aside>
       <section>
         <p>
-          <Select placeholder="请选择" items={[]} />
+          <RadioGroup
+            ref={ref1}
+            forwardedRef={ref2}
+            placeholder="请选择"
+            items={items}
+            onChange={(e) => {
+              console.log(e.target.value, ref1, ref2);
+            }}
+          />
         </p>
       </section>
     </div>

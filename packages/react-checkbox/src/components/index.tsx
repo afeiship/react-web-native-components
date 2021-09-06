@@ -24,7 +24,7 @@ export interface ReactCheckboxProps extends BaseProps {
   /**
    * Default checked.
    */
-  defaultChecked?: any;
+  defaultValue?: any;
   /**
    * Reference to original ref instance(tag: dom).
    */
