@@ -3,16 +3,19 @@ import classNames from 'classnames';
 import noop from '@jswork/noop';
 import ReactList from '@jswork/react-list';
 import classImperativeHandle from '@jswork/class-imperative-handle';
+import debounce from 'debounce';
+import nxToggle from '@jswork/next-toggle';
 
 const randomName = () => 'cg_' + Math.random().toString(36).substring(6);
 const CLASS_NAME = 'react-checkbox-group';
+const noEventStyle: any = { pointerEvents: 'none' };
 const DEFAULT_TEMPLATE = ({ item }, cb) => {
   const { value, label } = item;
   return (
-    <label key={value} className="is-item">
+    <span key={value} className="is-item">
       {cb()}
-      <span className="is-label">{label}</span>
-    </label>
+      {label}
+    </span>
   );
 };
 
@@ -39,6 +42,10 @@ export interface ReactCheckboxGroupProps extends BaseProps {
    * Default selected value.
    */
   defaultValue?: any[];
+  /**
+   * Runtime selected value.
+   */
+  value?: any[];
   /**
    * Reference to original ref instance(tag: dom).
    */
@@ -97,7 +104,7 @@ class ReactCheckboxGroup extends Component<ReactCheckboxGroupProps> {
           name={name}
           type="checkbox"
           data-value={value}
-          onChange={this.handleChange}
+          style={noEventStyle}
           {...itemProps}
         />
       );
@@ -105,6 +112,19 @@ class ReactCheckboxGroup extends Component<ReactCheckboxGroupProps> {
 
     return template!({ item, index }, cb);
   };
+
+  originalClick = (inEvent) => {
+    const { value, onChange } = this.props;
+    const { target } = inEvent;
+    const el = target.querySelector('[type="checkbox"]');
+    nxToggle(value, el.dataset.value);
+    el.checked = !el.checked;
+    this.forceUpdate(() => {
+      onChange!({ target: { value } });
+    });
+  };
+
+  handleClick = debounce(this.originalClick, 100, true);
 
   render() {
     const {
@@ -124,6 +144,7 @@ class ReactCheckboxGroup extends Component<ReactCheckboxGroupProps> {
         data-component={CLASS_NAME}
         className={classNames(CLASS_NAME, className)}
         ref={this.handleRef}
+        onClick={this.handleClick}
         {...props}>
         <ReactList items={items} template={this.handleTemplate} />
       </span>

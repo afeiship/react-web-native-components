@@ -1634,7 +1634,12 @@
   dependencies:
     "@jswork/next-nice-comments" "^1.0.1"
 
-"@jswork/next@^1.0.2", "@jswork/next@^1.0.4":
+"@jswork/next-toggle@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@jswork/next-toggle/-/next-toggle-1.0.0.tgz#081ec0637ff30ce16c55db377244412357329857"
+  integrity sha512-Fw7dqUcewF150+RKJ81LownqLb/vpyHwYwQncvUV/yK5dZFd1+74LSBFiHiKXda7LSmNdb7vOVdfx5SdGWszkg==
+
+"@jswork/next@^1.0.2", "@jswork/next@^1.0.4", "@jswork/next@^1.0.9":
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/@jswork/next/-/next-1.0.9.tgz#8099e2699bd5f76a07dbcfcf2fee4a43298860f5"
   integrity sha512-bQxwIEj1zkJTW4yknbE2LZn0QsiBV2EsWMyMzhrfuL6OO18iG+AB9LRfrF3Mobk71nM7V2nc7XjvjVMRLh3FFQ==
@@ -7114,6 +7119,11 @@ dateformat@^3.0.0:
   version "3.0.3"
   resolved "https://registry.nlark.com/dateformat/download/dateformat-3.0.3.tgz#a6e37499a4d9a9cf85ef5872044d62901c9889ae"
   integrity sha1-puN0maTZqc+F71hyBE1ikByYia4=
+
+debounce@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.npm.taobao.org/debounce/download/debounce-1.2.1.tgz#38881d8f4166a5c5848020c11827b834bcb3e0a5"
+  integrity sha1-OIgdj0FmpcWEgCDBGCe4NLyz4KU=
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.6, debug@^2.6.8, debug@^2.6.9:
   version "2.6.9"

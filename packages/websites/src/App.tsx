@@ -29,7 +29,7 @@ function App() {
             forwardedRef={ref2}
             placeholder="请选择"
             items={items}
-            onChange={(e) => {
+            onChange={(e: any) => {
               console.log(e.target.value, ref1, ref2);
             }}
           />
