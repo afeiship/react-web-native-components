@@ -1461,6 +1461,13 @@
   dependencies:
     prop-types "^15.6.2"
 
+"@docusaurus/remark-plugin-npm2yarn@^2.0.0-beta.6":
+  version "2.0.0-beta.6"
+  resolved "https://registry.nlark.com/@docusaurus/remark-plugin-npm2yarn/download/@docusaurus/remark-plugin-npm2yarn-2.0.0-beta.6.tgz#233a69867fbc8b23a0da2eb25e5acecb31e12913"
+  integrity sha1-Izpphn+8iyOg2i6yXlrOyzHhKRM=
+  dependencies:
+    npm-to-yarn "^1.0.1"
+
 "@docusaurus/theme-classic@2.0.0-beta.6":
   version "2.0.0-beta.6"
   resolved "https://registry.nlark.com/@docusaurus/theme-classic/download/@docusaurus/theme-classic-2.0.0-beta.6.tgz#4ae476e90cf875bb13eba5daedbd71d0cfdd8194"
@@ -1505,6 +1512,19 @@
     clsx "^1.1.1"
     fs-extra "^10.0.0"
     tslib "^2.1.0"
+
+"@docusaurus/theme-live-codeblock@^2.0.0-beta.6":
+  version "2.0.0-beta.6"
+  resolved "https://registry.nlark.com/@docusaurus/theme-live-codeblock/download/@docusaurus/theme-live-codeblock-2.0.0-beta.6.tgz#f46e83f230470d6dd741dc309e415541aeee3862"
+  integrity sha1-9G6D8jBHDW3XQdwwnkFVQa7uOGI=
+  dependencies:
+    "@docusaurus/core" "2.0.0-beta.6"
+    "@docusaurus/utils-validation" "2.0.0-beta.6"
+    "@philpl/buble" "^0.19.7"
+    clsx "^1.1.1"
+    parse-numeric-range "^1.2.0"
+    prism-react-renderer "^1.2.1"
+    react-live "^2.2.3"
 
 "@docusaurus/theme-search-algolia@2.0.0-beta.6":
   version "2.0.0-beta.6"
@@ -2855,6 +2875,21 @@
   dependencies:
     "@octokit/openapi-types" "^10.1.0"
 
+"@philpl/buble@^0.19.7":
+  version "0.19.7"
+  resolved "https://registry.npm.taobao.org/@philpl/buble/download/@philpl/buble-0.19.7.tgz#27231e6391393793b64bc1c982fc7b593198b893"
+  integrity sha1-JyMeY5E5N5O2S8HJgvx7WTGYuJM=
+  dependencies:
+    acorn "^6.1.1"
+    acorn-class-fields "^0.2.1"
+    acorn-dynamic-import "^4.0.0"
+    acorn-jsx "^5.0.1"
+    chalk "^2.4.2"
+    magic-string "^0.25.2"
+    minimist "^1.2.0"
+    os-homedir "^1.0.1"
+    regexpu-core "^4.5.4"
+
 "@polka/url@^1.0.0-next.20":
   version "1.0.0-next.20"
   resolved "https://registry.nlark.com/@polka/url/download/@polka/url-1.0.0-next.20.tgz#111b5db0f501aa89b05076fa31f0ea0e0c292cd3"
@@ -3129,6 +3164,13 @@
   integrity sha1-/81HC7s/i/MEgWePtVAieMqDOkM=
   dependencies:
     "@babel/types" "^7.3.0"
+
+"@types/buble@^0.20.0":
+  version "0.20.1"
+  resolved "https://registry.nlark.com/@types/buble/download/@types/buble-0.20.1.tgz?cache=0&sync_timestamp=1629707922063&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fbuble%2Fdownload%2F%40types%2Fbuble-0.20.1.tgz#cba009801fd417b0d2eb8fa6824b537842e05803"
+  integrity sha1-y6AJgB/UF7DS64+mgktTeELgWAM=
+  dependencies:
+    magic-string "^0.25.0"
 
 "@types/cacheable-request@^6.0.1":
   version "6.0.2"
@@ -3631,12 +3673,22 @@ accepts@~1.3.4, accepts@~1.3.5, accepts@~1.3.7:
     mime-types "~2.1.24"
     negotiator "0.6.2"
 
+acorn-class-fields@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.npm.taobao.org/acorn-class-fields/download/acorn-class-fields-0.2.1.tgz#748058bceeb0ef25164bbc671993984083f5a085"
+  integrity sha1-dIBYvO6w7yUWS7xnGZOYQIP1oIU=
+
 acorn-dynamic-import@^2.0.0:
   version "2.0.2"
   resolved "https://registry.npm.taobao.org/acorn-dynamic-import/download/acorn-dynamic-import-2.0.2.tgz#c752bd210bef679501b6c6cb7fc84f8f47158cc4"
   integrity sha1-x1K9IQvvZ5UBtsbLf8hPj0cVjMQ=
   dependencies:
     acorn "^4.0.3"
+
+acorn-dynamic-import@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npm.taobao.org/acorn-dynamic-import/download/acorn-dynamic-import-4.0.0.tgz#482210140582a36b83c3e342e1cfebcaa9240948"
+  integrity sha1-SCIQFAWCo2uDw+NC4c/ryqkkCUg=
 
 acorn-globals@^3.1.0:
   version "3.1.0"
@@ -3666,6 +3718,11 @@ acorn-import-assertions@^1.7.6:
   resolved "https://registry.nlark.com/acorn-import-assertions/download/acorn-import-assertions-1.7.6.tgz?cache=0&sync_timestamp=1627907855812&other_urls=https%3A%2F%2Fregistry.nlark.com%2Facorn-import-assertions%2Fdownload%2Facorn-import-assertions-1.7.6.tgz#580e3ffcae6770eebeec76c3b9723201e9d01f78"
   integrity sha1-WA4//K5ncO6+7HbDuXIyAenQH3g=
 
+acorn-jsx@^5.0.1:
+  version "5.3.2"
+  resolved "https://registry.nlark.com/acorn-jsx/download/acorn-jsx-5.3.2.tgz#7ed5bb55908b3b2f1bc55c6af1653bada7f07937"
+  integrity sha1-ftW7VZCLOy8bxVxq8WU7rafweTc=
+
 acorn-walk@^6.0.1:
   version "6.2.0"
   resolved "https://registry.nlark.com/acorn-walk/download/acorn-walk-6.2.0.tgz#123cb8f3b84c2171f1f7fb252615b1c78a6b1a8c"
@@ -3691,7 +3748,7 @@ acorn@^5.0.0, acorn@^5.5.3:
   resolved "https://registry.nlark.com/acorn/download/acorn-5.7.4.tgz#3e8d8a9947d0599a1796d10225d7432f4a4acf5e"
   integrity sha1-Po2KmUfQWZoXltECJddDL0pKz14=
 
-acorn@^6.0.1:
+acorn@^6.0.1, acorn@^6.1.1:
   version "6.4.2"
   resolved "https://registry.nlark.com/acorn/download/acorn-6.4.2.tgz#35866fd710528e92de10cf06016498e47e39e1e6"
   integrity sha1-NYZv1xBSjpLeEM8GAWSY5H454eY=
@@ -5469,6 +5526,18 @@ btoa-lite@^1.0.0:
   resolved "https://registry.npm.taobao.org/btoa-lite/download/btoa-lite-1.0.0.tgz#337766da15801210fdd956c22e9c6891ab9d0337"
   integrity sha1-M3dm2hWAEhD92VbCLpxokaudAzc=
 
+buble@0.19.6:
+  version "0.19.6"
+  resolved "https://registry.npm.taobao.org/buble/download/buble-0.19.6.tgz#915909b6bd5b11ee03b1c885ec914a8b974d34d3"
+  integrity sha1-kVkJtr1bEe4DsciF7JFKi5dNNNM=
+  dependencies:
+    chalk "^2.4.1"
+    magic-string "^0.25.1"
+    minimist "^1.2.0"
+    os-homedir "^1.0.1"
+    regexpu-core "^4.2.0"
+    vlq "^1.0.0"
+
 buffer-from@1.x, buffer-from@^1.0.0:
   version "1.1.2"
   resolved "https://registry.nlark.com/buffer-from/download/buffer-from-1.1.2.tgz#2b146a6fd72e80b4f55d255f35ed59a3a9a41bd5"
@@ -6365,6 +6434,16 @@ component-emitter@^1.2.1:
   resolved "https://registry.nlark.com/component-emitter/download/component-emitter-1.3.0.tgz#16e4070fba8ae29b679f2215853ee181ab2eabc0"
   integrity sha1-FuQHD7qK4ptnnyIVhT7hgasuq8A=
 
+component-props@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.npm.taobao.org/component-props/download/component-props-1.1.1.tgz#f9b7df9b9927b6e6d97c9bd272aa867670f34944"
+  integrity sha1-+bffm5kntubZfJvScqqGdnDzSUQ=
+
+component-xor@0.0.4:
+  version "0.0.4"
+  resolved "https://registry.npm.taobao.org/component-xor/download/component-xor-0.0.4.tgz#c55d83ccc1b94cd5089a4e93fa7891c7263e59aa"
+  integrity sha1-xV2DzMG5TNUImk6T+niRxyY+Wao=
+
 compressible@~2.0.16:
   version "2.0.18"
   resolved "https://registry.nlark.com/compressible/download/compressible-2.0.18.tgz#af53cca6b070d4c3c0750fbd77286a6d7cc46fba"
@@ -6642,7 +6721,7 @@ core-js@^2.4.0, core-js@^2.5.0:
   resolved "https://registry.nlark.com/core-js/download/core-js-2.6.12.tgz?cache=0&sync_timestamp=1630603383295&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcore-js%2Fdownload%2Fcore-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
   integrity sha1-2TM9+nsGXjR8xWgiGdb2kIWcwuw=
 
-core-js@^3.8.2, core-js@^3.9.1:
+core-js@^3.14.0, core-js@^3.8.2, core-js@^3.9.1:
   version "3.17.2"
   resolved "https://registry.nlark.com/core-js/download/core-js-3.17.2.tgz?cache=0&sync_timestamp=1630603383295&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcore-js%2Fdownload%2Fcore-js-3.17.2.tgz#f960eae710dc62c29cca93d5332e3660e289db10"
   integrity sha1-+WDq5xDcYsKcypPVMy42YOKJ2xA=
@@ -7581,6 +7660,14 @@ dom-converter@^0.2.0:
   integrity sha1-ZyGp2u4uKTaClVtq/kFncWJ7t2g=
   dependencies:
     utila "~0.4"
+
+dom-iterator@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/dom-iterator/download/dom-iterator-1.0.0.tgz#9c09899846ec41c2d257adc4d6015e4759ef05ad"
+  integrity sha1-nAmJmEbsQcLSV63E1gFeR1nvBa0=
+  dependencies:
+    component-props "1.1.1"
+    component-xor "0.0.4"
 
 dom-serializer@0:
   version "0.2.2"
@@ -12653,7 +12740,7 @@ macos-release@^2.2.0, macos-release@^2.5.0:
   resolved "https://registry.nlark.com/macos-release/download/macos-release-2.5.0.tgz?cache=0&sync_timestamp=1630503308689&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fmacos-release%2Fdownload%2Fmacos-release-2.5.0.tgz#067c2c88b5f3fb3c56a375b2ec93826220fa1ff2"
   integrity sha1-BnwsiLXz+zxWo3Wy7JOCYiD6H/I=
 
-magic-string@^0.25.0, magic-string@^0.25.2, magic-string@^0.25.7:
+magic-string@^0.25.0, magic-string@^0.25.1, magic-string@^0.25.2, magic-string@^0.25.7:
   version "0.25.7"
   resolved "https://registry.nlark.com/magic-string/download/magic-string-0.25.7.tgz#3f497d6fd34c669c6798dcb821f2ef31f5445051"
   integrity sha1-P0l9b9NMZpxnmNy4IfLvMfVEUFE=
@@ -13613,6 +13700,11 @@ npm-run-path@^4.0.0, npm-run-path@^4.0.1:
   integrity sha1-t+zR5e1T2o43pV4cImnguX7XSOo=
   dependencies:
     path-key "^3.0.0"
+
+npm-to-yarn@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.nlark.com/npm-to-yarn/download/npm-to-yarn-1.0.1.tgz#6cdb95114c4ff0be50a7a2381d4d16131a5f52df"
+  integrity sha1-bNuVEUxP8L5Qp6I4HU0WExpfUt8=
 
 "npmlog@0 || 1 || 2 || 3 || 4", npmlog@^4.0.0, npmlog@^4.1.2:
   version "4.1.2"
@@ -15604,6 +15696,20 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.npm.taobao.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha1-TxonOv38jzSIqMUWv9p4+HI1I2I=
 
+react-live@^2.2.3:
+  version "2.3.0"
+  resolved "https://registry.nlark.com/react-live/download/react-live-2.3.0.tgz#09fbac361903970e7cf51cee60729eeb164a5d87"
+  integrity sha1-CfusNhkDlw589RzuYHKe6xZKXYc=
+  dependencies:
+    "@types/buble" "^0.20.0"
+    buble "0.19.6"
+    core-js "^3.14.0"
+    dom-iterator "^1.0.0"
+    prism-react-renderer "^1.2.1"
+    prop-types "^15.7.2"
+    react-simple-code-editor "^0.11.0"
+    unescape "^1.0.1"
+
 react-loadable-ssr-addon-v5-slorber@^1.0.1:
   version "1.0.1"
   resolved "https://registry.nlark.com/react-loadable-ssr-addon-v5-slorber/download/react-loadable-ssr-addon-v5-slorber-1.0.1.tgz#2cdc91e8a744ffdf9e3556caabeb6e4278689883"
@@ -15716,6 +15822,11 @@ react-side-effect@^2.1.0:
   version "2.1.1"
   resolved "https://registry.npm.taobao.org/react-side-effect/download/react-side-effect-2.1.1.tgz#66c5701c3e7560ab4822a4ee2742dee215d72eb3"
   integrity sha1-ZsVwHD51YKtIIqTuJ0Le4hXXLrM=
+
+react-simple-code-editor@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.npm.taobao.org/react-simple-code-editor/download/react-simple-code-editor-0.11.0.tgz#bb57c7c29b570f2ab229872599eac184f5bc673c"
+  integrity sha1-u1fHwptXDyqyKYclmerBhPW8Zzw=
 
 react-test-renderer@^17.0.1:
   version "17.0.2"
@@ -16031,7 +16142,7 @@ regexpu-core@^2.0.0:
     regjsgen "^0.2.0"
     regjsparser "^0.1.4"
 
-regexpu-core@^4.7.1:
+regexpu-core@^4.2.0, regexpu-core@^4.5.4, regexpu-core@^4.7.1:
   version "4.7.1"
   resolved "https://registry.npm.taobao.org/regexpu-core/download/regexpu-core-4.7.1.tgz#2dea5a9a07233298fbf0db91fa9abc4c6e0f8ad6"
   integrity sha1-LepamgcjMpj78NuR+pq8TG4PitY=
@@ -18649,6 +18760,13 @@ unbox-primitive@^1.0.1:
     has-symbols "^1.0.2"
     which-boxed-primitive "^1.0.2"
 
+unescape@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/unescape/download/unescape-1.0.1.tgz#956e430f61cad8a4d57d82c518f5e6cc5d0dda96"
+  integrity sha1-lW5DD2HK2KTVfYLFGPXmzF0N2pY=
+  dependencies:
+    extend-shallow "^2.0.1"
+
 unherit@^1.0.4:
   version "1.1.3"
   resolved "https://registry.nlark.com/unherit/download/unherit-1.1.3.tgz?cache=0&sync_timestamp=1626423419302&other_urls=https%3A%2F%2Fregistry.nlark.com%2Funherit%2Fdownload%2Funherit-1.1.3.tgz#6c9b503f2b41b262330c80e91c8614abdaa69c22"
@@ -19158,6 +19276,11 @@ vite@^2.3.4:
     rollup "^2.38.5"
   optionalDependencies:
     fsevents "~2.3.2"
+
+vlq@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/vlq/download/vlq-1.0.1.tgz#c003f6e7c0b4c1edd623fd6ee50bbc0d6a1de468"
+  integrity sha1-wAP258C0we3WI/1u5Qu8DWod5Gg=
 
 vm-browserify@^1.0.1:
   version "1.1.2"
