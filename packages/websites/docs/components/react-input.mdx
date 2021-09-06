@@ -29,6 +29,18 @@ npm install @jswork/react-input
   </p>
   <p>
     <label>
+      <strong> disabled username: </strong>
+      <ReactInput disabled type="text" onChange={(e) => console.log(e.target.value)} />
+    </label>
+  </p>
+  <p>
+    <label>
+      <strong> readOnly username: </strong>
+      <ReactInput readOnly defaultValue={'aric.zheng'} type="text" onChange={(e) => console.log(e.target.value)} />
+    </label>
+  </p>
+  <p>
+    <label>
       <strong> email: </strong>
       <ReactInput type="email" onChange={(e) => console.log(e.target.value)} />
     </label>
