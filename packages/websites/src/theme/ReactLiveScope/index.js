@@ -11,6 +11,7 @@ import ReactCheckboxGroup from '@jswork/react-checkbox-group';
 import ReactInput from '@jswork/react-input';
 import ReactRadioGroup from '@jswork/react-radio-group';
 import ReactSelect from '@jswork/react-select';
+import ReactTextarea from '@jswork/react-textarea';
 
 // Add react-live imports you need here
 const ReactLiveScope = {
@@ -21,6 +22,7 @@ const ReactLiveScope = {
   ReactInput,
   ReactRadioGroup,
   ReactSelect,
+  ReactTextarea,
 };
 
 export default ReactLiveScope;
