@@ -1,6 +1,6 @@
 {
   "name": "@jswork/react-textarea",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Textarea with autosize for react.",
   "license": "MIT",
   "main": "dist/index.js",

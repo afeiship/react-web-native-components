@@ -1,6 +1,6 @@
 {
   "name": "@jswork/react-checkbox",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Pure checkbox for react.",
   "license": "MIT",
   "main": "dist/index.js",
