@@ -30,7 +30,7 @@ export interface TemplateArgs {
   current: any;
 }
 
-export type TempalteCallback = (value: any, itemProps: any) => JSX.Element;
+export type TemplateCallback = (value: any, itemProps?: any) => JSX.Element;
 
 export type ReactRadioGroupProps = BaseProps & {
   /**
@@ -52,7 +52,7 @@ export type ReactRadioGroupProps = BaseProps & {
   /**
    * Select option item teamplate.
    */
-  template?: (args: TemplateArgs, callback: TempalteCallback) => any;
+  template?: (args: TemplateArgs, callback: TemplateCallback) => any;
 };
 
 class ReactRadioGroup extends Component<ReactRadioGroupProps> {
@@ -90,7 +90,7 @@ class ReactRadioGroup extends Component<ReactRadioGroupProps> {
 
   handleTemplate = ({ item, index }) => {
     const { name, template } = this.props;
-    const cb: TempalteCallback = (inValue, inProps) => {
+    const cb: TemplateCallback = (inValue, inProps) => {
       return (
         <input
           onChange={this.onChange}

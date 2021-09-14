@@ -32,7 +32,7 @@ export interface TemplateArgs {
   index: number;
 }
 
-export type TempalteCallback = (value: any, itemProps: any) => JSX.Element;
+export type TemplateCallback = (value: any, itemProps: any) => JSX.Element;
 export interface ReactCheckboxGroupProps extends BaseProps {
   /**
    * The changed handler.
@@ -57,7 +57,7 @@ export interface ReactCheckboxGroupProps extends BaseProps {
   /**
    * Select option item teamplate.
    */
-  template?: (args: TemplateArgs, callback: TempalteCallback) => any;
+  template?: (args: TemplateArgs, callback: TemplateCallback) => any;
 }
 
 class ReactCheckboxGroup extends Component<ReactCheckboxGroupProps> {
