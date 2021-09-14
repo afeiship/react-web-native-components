@@ -2,6 +2,7 @@ import noop from '@jswork/noop';
 import classNames from 'classnames';
 import React, { Component } from 'react';
 import ReactList from '@jswork/react-list';
+import { ReactListProps } from '@jswork/react-list/dist/components';
 
 const CLASS_NAME = 'react-radio-group';
 const randomName = () => 'rg_' + Math.random().toString(36).substring(6);
@@ -21,7 +22,7 @@ export interface EventTarget {
   };
 }
 
-type BaseProps = Omit<React.AllHTMLAttributes<HTMLInputElement>, 'onChange'>;
+type BaseProps = Omit<React.AllHTMLAttributes<HTMLInputElement>, 'onChange'> & ReactListProps;
 
 export interface TemplateArgs {
   item: any;
@@ -31,7 +32,7 @@ export interface TemplateArgs {
 
 export type TempalteCallback = (value: any, itemProps: any) => JSX.Element;
 
-export interface ReactRadioGroupProps extends BaseProps {
+export type ReactRadioGroupProps = BaseProps & {
   /**
    * The changed handler.
    */
@@ -52,7 +53,7 @@ export interface ReactRadioGroupProps extends BaseProps {
    * Select option item teamplate.
    */
   template?: (args: TemplateArgs, callback: TempalteCallback) => any;
-}
+};
 
 class ReactRadioGroup extends Component<ReactRadioGroupProps> {
   static displayName = CLASS_NAME;
