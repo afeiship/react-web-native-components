@@ -4293,11 +4293,6 @@ autoprefixer@^6.3.1:
     postcss "^5.2.16"
     postcss-value-parser "^3.2.3"
 
-autosize@^4.0.2:
-  version "4.0.4"
-  resolved "https://registry.nlark.com/autosize/download/autosize-4.0.4.tgz#924f13853a466b633b9309330833936d8bccce03"
-  integrity sha1-kk8ThTpGa2M7kwkzCDOTbYvMzgM=
-
 autosize@^5.0.1:
   version "5.0.1"
   resolved "https://registry.nlark.com/autosize/download/autosize-5.0.1.tgz#ed269b0fa9b7eb47627048a1bb3299e99e003a0f"
@@ -10285,6 +10280,11 @@ indent-string@^4.0.0:
   resolved "https://registry.nlark.com/indent-string/download/indent-string-4.0.0.tgz#624f8f4497d619b2d9768531d58f4122854d7251"
   integrity sha1-Yk+PRJfWGbLZdoUx1Y9BIoVNclE=
 
+indent-string@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.nlark.com/indent-string/download/indent-string-5.0.0.tgz?cache=0&sync_timestamp=1618847271946&other_urls=https%3A%2F%2Fregistry.nlark.com%2Findent-string%2Fdownload%2Findent-string-5.0.0.tgz#4fd2980fccaf8622d14c64d694f4cf33c81951a5"
+  integrity sha1-T9KYD8yvhiLRTGTWlPTPM8gZUaU=
+
 indento@^1.1.7:
   version "1.1.13"
   resolved "https://registry.npm.taobao.org/indento/download/indento-1.1.13.tgz#751331b327c04740eeb7be40c5606e6e255c9e36"
@@ -15647,7 +15647,7 @@ react-docgen@^5.2.1:
     node-dir "^0.1.10"
     strip-indent "^3.0.0"
 
-react-dom@^17.0.1:
+react-dom@^17.0.1, react-dom@^17.0.2:
   version "17.0.2"
   resolved "https://registry.nlark.com/react-dom/download/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
   integrity sha1-7P+2hF462Nv83EmPDQqTlzZQLCM=
@@ -15857,7 +15857,7 @@ react-textarea-autosize@^8.3.2:
     use-composed-ref "^1.0.0"
     use-latest "^1.0.0"
 
-react@^17.0.1:
+react@^17.0.1, react@^17.0.2:
   version "17.0.2"
   resolved "https://registry.nlark.com/react/download/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
   integrity sha1-0LXMUW0p6z7uOD91tihkz7aAADc=
@@ -17890,7 +17890,7 @@ style-to-object@0.3.0, style-to-object@^0.3.0:
   dependencies:
     inline-style-parser "0.1.1"
 
-styled-components@^5.3.1:
+styled-components@^5.3.0, styled-components@^5.3.1:
   version "5.3.1"
   resolved "https://registry.nlark.com/styled-components/download/styled-components-5.3.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fstyled-components%2Fdownload%2Fstyled-components-5.3.1.tgz#8a86dcd31bff7049c2ed408bae36fa23f03f071a"
   integrity sha1-iobc0xv/cEnC7UCLrjb6I/A/Bxo=
