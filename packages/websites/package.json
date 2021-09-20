@@ -25,6 +25,7 @@
     "@jswork/react-radio-group": "^1.0.5",
     "@jswork/react-select": "^1.0.1",
     "@jswork/react-textarea": "^1.0.0",
+    "@jswork/react-toggle": "^1.0.3",
     "@mdx-js/react": "^1.6.21",
     "@svgr/webpack": "^5.5.0",
     "clsx": "^1.1.1",

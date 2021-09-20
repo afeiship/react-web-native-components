@@ -12,6 +12,7 @@ import ReactInput from '@jswork/react-input';
 import ReactRadioGroup from '@jswork/react-radio-group';
 import ReactSelect from '@jswork/react-select';
 import ReactTextarea from '@jswork/react-textarea';
+import ReactToggle from '@jswork/react-toggle';
 
 // Add react-live imports you need here
 const ReactLiveScope = {
@@ -23,6 +24,7 @@ const ReactLiveScope = {
   ReactRadioGroup,
   ReactSelect,
   ReactTextarea,
+  ReactToggle,
 };
 
 export default ReactLiveScope;
