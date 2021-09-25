@@ -1934,6 +1934,11 @@
   resolved "https://registry.yarnpkg.com/@jswork/next-toggle/-/next-toggle-1.0.0.tgz#081ec0637ff30ce16c55db377244412357329857"
   integrity sha512-Fw7dqUcewF150+RKJ81LownqLb/vpyHwYwQncvUV/yK5dZFd1+74LSBFiHiKXda7LSmNdb7vOVdfx5SdGWszkg==
 
+"@jswork/next-tree-walk@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@jswork/next-tree-walk/-/next-tree-walk-1.0.2.tgz#945f806051b35f1c913b83f7aa5f0e6603b00f37"
+  integrity sha512-GK+FmHTfJntqvlW8Z5no+BXVfC+MtMRbNRxDyu7X2lyfJPOlB7QqRCiq30fLljKm65h4IAZPwYRO7qpCSW8TGw==
+
 "@jswork/next@^1.0.2", "@jswork/next@^1.0.4", "@jswork/next@^1.0.9":
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/@jswork/next/-/next-1.0.9.tgz#8099e2699bd5f76a07dbcfcf2fee4a43298860f5"
