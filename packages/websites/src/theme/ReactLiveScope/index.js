@@ -13,11 +13,13 @@ import ReactRadioGroup from '@jswork/react-radio-group';
 import ReactSelect from '@jswork/react-select';
 import ReactTextarea from '@jswork/react-textarea';
 import ReactToggle from '@jswork/react-toggle';
-
+import ReactTree from '@jswork/react-tree';
+import treeItems from './tree.json';
 // Add react-live imports you need here
 const ReactLiveScope = {
   React,
   ...React,
+  treeItems,
   ReactCheckbox,
   ReactCheckboxGroup,
   ReactInput,
@@ -25,6 +27,9 @@ const ReactLiveScope = {
   ReactSelect,
   ReactTextarea,
   ReactToggle,
+  ReactTree,
 };
+
+console.log('treeItems:', treeItems);
 
 export default ReactLiveScope;
