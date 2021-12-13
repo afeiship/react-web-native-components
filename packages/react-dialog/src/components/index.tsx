@@ -3,7 +3,16 @@ import classNames from 'classnames';
 import React, { Component, createRef } from 'react';
 
 const CLASS_NAME = 'react-dialog';
-export type ReactDialogProps = {
+
+export interface EventTarget {
+  target: {
+    value: any;
+  };
+}
+
+type BaseProps = Omit<React.AllHTMLAttributes<HTMLDialogElement>, 'onChange' | 'value'>;
+
+export interface ReactDialogProps extends BaseProps {
   /**
    * The extended className for component.
    */
@@ -15,8 +24,8 @@ export type ReactDialogProps = {
   /**
    * The change handler.
    */
-  onChange?: Function;
-};
+  onChange?: (inEvent: EventTarget) => void;
+}
 
 export default class ReactDialog extends Component<ReactDialogProps> {
   static displayName = CLASS_NAME;
