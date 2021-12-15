@@ -1,7 +1,7 @@
 // https://jestjs.io/docs/en/configuration
 module.exports = {
   verbose: true,
-  testRegex: [/\.spec.js/],
+  testRegex: [/\.spec.tsx/],
   testEnvironment: 'jsdom',
   transform: {
     '^.+\\.tsx?$': 'ts-jest',

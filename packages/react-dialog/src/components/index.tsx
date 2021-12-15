@@ -10,7 +10,13 @@ export interface EventTarget {
   };
 }
 
-type BaseProps = Omit<React.AllHTMLAttributes<HTMLDialogElement>, 'onChange' | 'value'>;
+interface HTMLDialogElementExt extends HTMLDialogElement {
+  open: boolean;
+  close: () => void;
+  showModal: () => void;
+}
+
+type BaseProps = Omit<React.AllHTMLAttributes<HTMLDialogElementExt>, 'onChange' | 'value'>;
 
 export interface ReactDialogProps extends BaseProps {
   /**
@@ -35,8 +41,7 @@ export default class ReactDialog extends Component<ReactDialogProps> {
     onChange: noop
   };
 
-  // todo: any how to removed?
-  private rootRef = createRef<any>();
+  private rootRef = createRef<HTMLDialogElementExt>();
 
   get dom() {
     return this.rootRef.current!;
