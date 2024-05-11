@@ -1,6 +1,6 @@
-import React from 'react';
 import ReactToggle from '../../src/main';
 import styled from 'styled-components';
+import {useState} from "react";
 
 const Container = styled.div`
   width: 80%;
@@ -17,16 +17,18 @@ const Container = styled.div`
     justify-content: center;
     user-select: none;
     margin: 0 auto 10px;
+
     &[data-value='true'] {
       background: #f00;
     }
+
     &[data-value='false'] {
     }
   }
 `;
 
 export default (props: any) => {
-  const [value, setValue] = React.useState(false);
+  const [value, setValue] = useState(false);
   return (
     <Container>
       <ReactToggle value={value} onChange={(e) => setValue(e.target.value)}>

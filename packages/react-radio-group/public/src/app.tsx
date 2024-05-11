@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactRadioGroup from '../../src/main';
 import styled from 'styled-components';
 

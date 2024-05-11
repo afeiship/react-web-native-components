@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactTree from '../../src/main';
 import styled from 'styled-components';
 import { items } from './items';

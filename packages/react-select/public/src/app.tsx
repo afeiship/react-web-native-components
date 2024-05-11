@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactSelect from '../../src/main';
 import styled from 'styled-components';
 

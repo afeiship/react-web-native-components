@@ -1,6 +1,6 @@
-import React, { useRef } from 'react';
 import ReactInput from '../../src/main';
 import styled from 'styled-components';
+import {useRef} from "react";
 
 const Container = styled.div`
   width: 80%;

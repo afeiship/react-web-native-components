@@ -1,4 +1,4 @@
-import React from 'react';
+import React from'react';
 import ReactCheckbox from '../../src/main';
 import styled from 'styled-components';
 
@@ -7,10 +7,12 @@ const Container = styled.div`
   margin: 30px auto 0;
 `;
 
-export default (props: any) => {
+export default () => {
   return (
     <Container>
-      <ReactCheckbox />
+      <ReactCheckbox onChange={e => {
+        console.log('e: ', e.target)
+      }}/>
     </Container>
   );
 };
